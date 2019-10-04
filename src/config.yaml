@@ -1,6 +1,3 @@
-app:
-	debug:		true
-
 scraper:
 	videoQuality:	4
 	pollInterval:	30

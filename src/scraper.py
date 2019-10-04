@@ -45,8 +45,9 @@ class VideoScraper:
 
 		print('[VideoScraper::scrape] {}'.format(url))
 
-		headers = { 'User-Agent': '', 'Cookie': 'AMCV_248F210755B762187F000101%40AdobeOrg=1687686476%7CMCIDTS%7C18172%7CvVersion%7C3.0.0; check=true; ak_bmsc=03BEE504793B8529CBEB413E7FB248B3B81960C7184A0000720B955D0DD13D42~plAgkRIRDBGugecrE/sJj5w5Jo1GepUGN+UdV9/Z7gdtmu+M5ACv9mdJ12Cgl1dlqZTUxH9JR8WqBW2q7Ie5HpIMPPXNrBEb1j+wLZD/fX92QOLAp05OWLKgZZ+OxnIamyyJ8J7EqmNpv7VfZiaZ2TCl7HGf8ea3hZNE8mS2t/yR/k1zmYAZf9fPt9DoG5MeUxNUKld8lD1QgCbQO1n/U9ZlFdJHuNzM7EamZXxxIclW4=' }
-		async with ClientSession() as session:
+                headers = {'User-Agent': ''}
+		
+                async with ClientSession() as session:
 			async with session.get(url, headers = headers, timeout = timeout) as response:
 				response = await response.read()
 
